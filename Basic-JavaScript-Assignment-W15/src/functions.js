@@ -16,6 +16,7 @@
 function uselessFunction(){
   return null;
 }
+
 //end your code
 
 var bar = 'not a function';
@@ -33,14 +34,11 @@ var barType = typeof bar;
 
 //your code here
 
-bar = function (a[]){
+bar = function (a){
   var i, temp;
   for(i = 0; i < a.length; i++){
 	  temp = a[i];
-	  a[i] * 2.0;
-	  if(a[i] == temp){
-		  return false;
-	  }
+	  a[i] *= 2.0;
   }
   return true;
 }
@@ -81,18 +79,31 @@ function GitLog(hash, date, message) {
 
 //your code here
 
-function parseGit(log[]){
-	var i, j, hash, date, message;
+function parseGit(logArray){
+	var i, j, hash = "", date = "", message ="";
+	var gitLog = new object;
 	
-	for(i = 0; i != ' ' ; i++){
-		hash += log[i];		
+	while(isNaN() == false){
+		hash += logArray[i];
+		i++;
 	}
-	for(i; i != '"' ; i++){
-		date += log[i];		
-	}
-	for(i; i != '"' ; i++){
-		date += log[i];		
-	}
+	
+	j = (logArray.length - i);
+	for(i = j; i < j; i++){
+	date += logArray[i];	
+//		if(log[i] == ' "'){
+			j = (logArray.length - i);
+			for(i; i < j; i++){
+				message += logArray[i]; 
+			}
+		}
+	/*	
+	gitLog.hash = hash;
+	gitLog.date = date;
+	gitLog.message = message;
+	*/
+return gitLog;	
+	
 }
 
 //end your code
