@@ -1,1 +1,19 @@
-You log goes in this  file.
+
+Start: Sun, 1 Feb 2015 19:42:00 -0800
+End: Sun, 1 Feb 2015 21:35:28 -0800
+Tasks: Still a couple issues, but I can’t figure them out, I might be done
+
+Start: Sun, 1 Feb 2015 16:21:00 -0800
+End: Sun, 1 Feb 2015 18:59:36 -0800
+Tasks: Done with Functions, a few bugs with objects
+
+Start: Sun, 1 Feb 2015 06:28:00 -0800
+End: Sun, 1 Feb 2015 10:15:05 -0800
+Tasks: Most of the way on functions, working on objects
+
+Start: Sat, 31 Jan 2015 2015 20:02:00 -0800
+End: Sun, 1 Feb 2015 02:02:28 -0800
+Tasks: Began assignment
+
+
+
