@@ -37,7 +37,10 @@ var barType = typeof bar;
 bar = function (a){
   var i, temp;
   for(i = 0; i < a.length; i++){
-	  temp = a[i];
+	  if(isNaN(a[i]) == true){
+		  console.log('Invalid Input');
+		  return false;
+	  }
 	  a[i] *= 2.0;
   }
   return true;
@@ -83,6 +86,12 @@ function parseGit(logArray){
 	var i, j, hash = "", date = "", message ="";
 	var gitLog = new object;
 	
+	for(i = 0; i < logArray.length; i++){
+	  gitLog.hash = logArray.split(' ') [0];
+	  gitLog.date = logArray.split('"') [1];
+	  gitLog.message = logArray.split('"') [2];
+	}
+	/*
 	while(isNaN() == false){
 		hash += logArray[i];
 		i++;
@@ -101,9 +110,7 @@ function parseGit(logArray){
 	gitLog.hash = hash;
 	gitLog.date = date;
 	gitLog.message = message;
-	*/
-return gitLog;	
-	
+	*/		
 }
 
 //end your code

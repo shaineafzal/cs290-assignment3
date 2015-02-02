@@ -42,6 +42,30 @@
 
 //your code here
 
+var mArray = [];
+
+var MessageLog = function(user){
+	this.user = user;
+}
+
+MessageLog.prototype.logMessage = function(messageText, direction){
+	this.messageText = messageText;
+	if(direction == 0){
+		this.direction = 'Sent';
+	}
+	else if(direction == 1){
+		this.direction = 'Received';
+	}
+	mArray.push(MessageLog);
+}
+
+MessageLog.prototype.getSentMessage = function(n){
+	var i = (mArray.length - n);
+	this.MessageLog = mArray[i];
+	console.log(this.MessageLog.messageText);
+}
+
+
 //end your code
 
 /**
@@ -50,7 +74,11 @@
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function(){
+	var i = (mArray.length - 1);
+	this.MessageLog = mArray[i];
+	console.log(this.MessageLog.messageText);
+}
 //end your code
 
 /**
@@ -60,5 +88,8 @@
 */
 
 //your code here
-
+var myLog = new MessageLog;
+myLog.messageText = 'foo';
+myLog.messageText = 'bar';
+myLog.messageText = 'baz';
 //end your code
