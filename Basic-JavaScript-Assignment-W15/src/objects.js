@@ -48,7 +48,8 @@ var MessageLog = function(user){
 	this.user = user;
 }
 
-MessageLog.prototype.logMessage = function(messageText, direction){
+MessageLog.prototype.logMessage = function(messageText, direction){ 
+	var i = (mArray.length - 1);
 	this.messageText = messageText;
 	if(direction == 0){
 		this.direction = 'Sent';
@@ -56,13 +57,13 @@ MessageLog.prototype.logMessage = function(messageText, direction){
 	else if(direction == 1){
 		this.direction = 'Received';
 	}
-	mArray.push(MessageLog);
+	mArray[i] = MessageLog;
 }
 
 MessageLog.prototype.getSentMessage = function(n){
-	var i = (mArray.length - n);
+	var i = (mArray.length - (n +1));
 	this.MessageLog = mArray[i];
-	console.log(this.MessageLog.messageText);
+	console.log(MessageLog.messageText);
 }
 
 

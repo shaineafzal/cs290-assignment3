@@ -83,14 +83,12 @@ function GitLog(hash, date, message) {
 //your code here
 
 function parseGit(logArray){
-	var i, j, hash = "", date = "", message ="";
+	var i, j;
 	var gitLog = new object;
 	
-	for(i = 0; i < logArray.length; i++){
 	  gitLog.hash = logArray.split(' ') [0];
 	  gitLog.date = logArray.split('"') [1];
 	  gitLog.message = logArray.split('"') [2];
-	}
 	/*
 	while(isNaN() == false){
 		hash += logArray[i];
@@ -111,6 +109,7 @@ function parseGit(logArray){
 	gitLog.date = date;
 	gitLog.message = message;
 	*/		
+	return gitLog;
 }
 
 //end your code
