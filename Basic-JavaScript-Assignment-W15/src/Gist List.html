@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gist List</title>
+  <script src="Gist.js"></script>
+ </head>
+ <body>
+   <div id="output"></div>
+   <section>
+   <form>
+     <div>
+       <label>How many pages of Gists would you like to display</label><br>
+       <input type="number" name="pages" min="1" max="5">
+	 </div>
+	 <div>
+	   <label>What language of Gists would you like to see</label><br>
+	   <input type="checkbox" name="language1" value="Python">Python
+	   <input type="checkbox" name="language2" value="JSON">JSON
+	   <input type="checkbox" name="language3" value="Javascript">Javascript
+	   <input type="checkbox" name="language4" value="SQL">SQL<br><br>
+     </div>	
+     <div><input type="button" name="search" onclick="getGists()" value="Search"></div>  	 
+   </form>
+   </section>
+</body>
+</html>	
